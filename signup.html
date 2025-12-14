@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Оставить заявку в агентство недвижимости Villato" />
+  <title>Оставить заявку | Villato</title>
+  <link rel="icon" href="icons8-недвижимость-50.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons8-недвижимость-50.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <div class="logo">V</div>
+        <div>
+          <div class="brand-title">Villato</div>
+          <div class="brand-sub">Агентство недвижимости</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="about.html">О компании</a>
+        <a href="services.html">Услуги</a>
+        <a href="cost.html">Оценка стоимости</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="cta" href="signup.html" class="active">Оставить заявку</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="page-header">
+      <h1>Оставить заявку</h1>
+      <p class="muted">Заполните форму и получите персональное предложение</p>
+    </section>
+
+    <section class="signup-section">
+      <div class="signup-container">
+        <div class="signup-benefits">
+          <h2>Почему стоит оставить заявку?</h2>
+          <div class="benefits-list">
+            <div class="benefit">
+              <i class="fa fa-clock"></i>
+              <div>
+                <h4>Быстрый ответ</h4>
+                <p>Свяжемся с вами в течение 15 минут</p>
+              </div>
+            </div>
+            <div class="benefit">
+              <i class="fa fa-user-check"></i>
+              <div>
+                <h4>Персональный менеджер</h4>
+                <p>Закрепим за вами персонального специалиста</p>
+              </div>
+            </div>
+            <div class="benefit">
+              <i class="fa fa-gift"></i>
+              <div>
+                <h4>Специальное предложение</h4>
+                <p>Получите скидку 5% при первой сделке</p>
+              </div>
+            </div>
+            <div class="benefit">
+              <i class="fa fa-chart-line"></i>
+              <div>
+                <h4>Анализ рынка</h4>
+                <p>Бесплатный анализ аналогичных объектов</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"Оставил заявку на сайте, через 10 минут мне перезвонили. Через 3 дня нашли покупателя на квартиру по цене выше рынка. Рекомендую!"</p>
+              <div class="testimonial-author">
+                <strong>Антон Петров</strong>
+                <span class="small muted">Клиент Villato</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="signup-form-container">
+          <div class="signup-form">
+            <h3>Заполните форму</h3>
+            
+            <form id="signup-form">
+              <div class="form-group">
+                <label for="signup-name">ФИО *</label>
+                <input type="text" id="signup-name" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="signup-phone">Телефон *</label>
+                  <input type="tel" id="signup-phone" required>
+                </div>
+                <div class="form-group">
+                  <label for="signup-email">Email *</label>
+                  <input type="email" id="signup-email" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="signup-service">Интересующая услуга *</label>
+                <select id="signup-service" required>
+                  <option value="">Выберите услугу</option>
+                  <option value="sale">Продажа недвижимости</option>
+                  <option value="buy">Покупка недвижимости</option>
+                  <option value="estimate">Оценка стоимости</option>
+                  <option value="consultation">Консультация</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="signup-object">Описание объекта</label>
+                <textarea id="signup-object" rows="3" placeholder="Адрес, площадь, этаж..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="signup-budget">Бюджет/ожидания</label>
+                <input type="text" id="signup-budget" placeholder="Например: немношка(50-70к $), мношка(>70к $)">
+              </div>
+
+              <div class="form-group">
+                <label for="signup-time">Когда планируете сделку?</label>
+                <select id="signup-time">
+                  <option value="">Выберите срок</option>
+                  <option value="urgent">Срочно (в течение недели)</option>
+                  <option value="month">В течение месяца</option>
+                  <option value="quarter">В течение квартала</option>
+                  <option value="considering">Только рассматриваю</option>
+                </select>
+              </div>
+
+              <div class="form-group checkbox">
+                <input type="checkbox" id="signup-agree" required>
+                <label for="signup-agree">Я соглашаюсь на обработку персональных данных и с политикой конфиденциальности</label>
+              </div>
+
+              <button type="submit" class="cta">Отправить заявку</button>
+            </form>
+
+            <div id="signup-success" class="signup-success hidden">
+              <div class="success-icon">
+                <i class="fa fa-check-circle"></i>
+              </div>
+              <h4>Заявка отправлена!</h4>
+              <p>Мы свяжемся с вами в течение 15 минут. Наш специалист перезвонит по указанному номеру телефона.</p>
+              <div class="success-info">
+                <p><strong>Ваш номер заявки:</strong> #2024-<span id="request-number">00123</span></p>
+                <p class="small muted">Сохраните этот номер для быстрого доступа к информации по вашей заявке.</p>
+              </div>
+              <a href="index.html" class="cta">Вернуться на главную</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container bottom">
+      <div>
+        <div class="brand-title">Villato</div>
+        <div class="small muted">© <span id="year"></span> Все права защищены</div>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="agreement.html" class="small muted">Пользовательское соглашение</a>
+          <span>·</span>
+          <a href="terms.html" class="small muted">Условия</a>
+        </nav>
+        <div class="socials">
+          <a href="https://t.me/villato_realty" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://twitter.com/villato_realty" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="small muted">+375 29 114 38 72</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const signupForm = document.getElementById('signup-form');
+      const signupSuccess = document.getElementById('signup-success');
+      
+      if (signupForm) {
+        signupForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Генерация номера заявки
+          const requestNumber = Math.floor(Math.random() * 1000) + 1000;
+          document.getElementById('request-number').textContent = requestNumber;
+          
+          // Показ успешного сообщения
+          signupForm.style.display = 'none';
+          signupSuccess.classList.remove('hidden');
+          
+          // Прокрутка к успешному сообщению
+          signupSuccess.scrollIntoView({ behavior: 'smooth' });
+          
+          // В реальном проекте здесь будет отправка формы на сервер
+          console.log('Форма отправлена:', {
+            name: document.getElementById('signup-name').value,
+            phone: document.getElementById('signup-phone').value,
+            email: document.getElementById('signup-email').value,
+            service: document.getElementById('signup-service').value
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
