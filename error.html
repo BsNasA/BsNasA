@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Страница не найдена - агентство недвижимости Villato" />
+  <title>Страница не найдена (404) | Villato</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="error.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <div class="logo">V</div>
+        <div>
+          <div class="brand-title">Villato</div>
+          <div class="brand-sub">Агентство недвижимости</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="about.html">О компании</a>
+        <a href="services.html">Услуги</a>
+        <a href="cost.html">Оценка стоимости</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="cta" href="signup.html">Оставить заявку</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="error-section">
+      <div class="error-content">
+        <div class="error-code">
+          <span class="error-number">4</span>
+          <span class="error-icon">
+            <i class="fa fa-home"></i>
+          </span>
+          <span class="error-number">4</span>
+        </div>
+        
+        <h1>Страница не найдена</h1>
+        
+        <div class="error-message">
+          <p>К сожалению, запрашиваемая вами страница не существует или была перемещена.</p>
+          <p>Возможно, вы ошиблись при вводе адреса или перешли по неработающей ссылке.</p>
+        </div>
+        
+        <div class="error-actions">
+          <a href="index.html" class="cta">
+            <i class="fa fa-home"></i>
+            Вернуться на главную
+          </a>
+          <a href="contacts.html" class="cta secondary">
+            <i class="fa fa-phone"></i>
+            Связаться с нами
+          </a>
+        </div>
+        
+        <div class="error-search">
+          <h3>Поиск по сайту</h3>
+          <div class="search-box">
+            <input type="text" id="search-input" placeholder="Введите ключевые слова...">
+            <button type="button" id="search-button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="error-suggestions">
+          <h3>Возможно, вы ищете:</h3>
+          <div class="suggestions-grid">
+            <a href="services.html" class="suggestion-card">
+              <i class="fa fa-home"></i>
+              <h4>Услуги</h4>
+              <p>Продажа, покупка, оценка недвижимости</p>
+            </a>
+            <a href="cost.html" class="suggestion-card">
+              <i class="fa fa-calculator"></i>
+              <h4>Оценка стоимости</h4>
+              <p>Узнать стоимость вашей недвижимости</p>
+            </a>
+            <a href="contacts.html" class="suggestion-card">
+              <i class="fa fa-map-marker-alt"></i>
+              <h4>Контакты</h4>
+              <p>Наши адреса и телефоны</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container bottom">
+      <div>
+        <div class="brand-title">Villato</div>
+        <div class="small muted">© <span id="year"></span> Все права защищены</div>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="agreement.html" class="small muted">Пользовательское соглашение</a>
+          <span>·</span>
+          <a href="terms.html" class="small muted">Условия</a>
+        </nav>
+        <div class="socials">
+          <a href="https://t.me/villato_realty" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://twitter.com/villato_realty" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="small muted">+7 (495) 123-45-67</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Установка текущего года в футере
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+      
+      // Поиск по сайту (упрощенный вариант)
+      const searchButton = document.getElementById('search-button');
+      const searchInput = document.getElementById('search-input');
+      
+      if (searchButton && searchInput) {
+        searchButton.addEventListener('click', function() {
+          const query = searchInput.value.trim().toLowerCase();
+          
+          if (!query) {
+            alert('Введите поисковый запрос');
+            return;
+          }
+          
+          // Простой редирект на поисковую страницу или главную
+          alert('Поиск по сайту: "' + query + '"\nВ реальном сайте здесь будет поисковая система.');
+          
+          // В реальном проекте можно сделать:
+          // window.location.href = 'search.html?q=' + encodeURIComponent(query);
+        });
+        
+        // Поиск при нажатии Enter
+        searchInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            searchButton.click();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
