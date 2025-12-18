@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Оценка стоимости недвижимости" />
+  <title>Оценка стоимости | Villato</title>
+  <link rel="icon" href="icons8-недвижимость-50.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons8-недвижимость-50.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="icons8-недвижимость-50.png" alt="Villato logo">
+        <div>
+          <div class="brand-title">Villato</div>
+          <div class="brand-sub">Агентство недвижимости</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="about.html">О компании</a>
+        <a href="services.html">Услуги</a>
+        <a href="cost.html" class="active">Оценка стоимости</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="cta" href="signup.html">Оставить заявку</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="page-header">
+      <h1>Оценка стоимости недвижимости</h1>
+      <p class="muted">Профессиональная оценка рыночной стоимости за 24 часа</p>
+    </section>
+
+    <section class="cost-section">
+      <div class="cost-info">
+        <div class="cost-description">
+          <h2>Зачем нужна оценка недвижимости?</h2>
+          <p>Профессиональная оценка стоимости недвижимости помогает определить реальную рыночную цену объекта, что важно для:</p>
+          
+          <div class="reasons-grid">
+            <div class="reason">
+              <i class="fa fa-balance-scale"></i>
+              <h4>Справедливой продажи</h4>
+              <p>Установить адекватную цену для быстрой продажи</p>
+            </div>
+            <div class="reason">
+              <i class="fa fa-university"></i>
+              <h4>Ипотечного кредитования</h4>
+              <p>Получить кредит в банке на максимальную сумму</p>
+            </div>
+            <div class="reason">
+              <i class="fa fa-gavel"></i>
+              <h4>Судебных разбирательств</h4>
+              <p>Для разделения имущества или наследства</p>
+            </div>
+            <div class="reason">
+              <i class="fa fa-shield-alt"></i>
+              <h4>Страхования имущества</h4>
+              <p>Определить страховую стоимость объекта</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cost-form-container">
+          <div class="cost-form">
+            <h3>Бесплатная онлайн-оценка</h3>
+            <p class="muted small">Узнайте примерную стоимость вашей недвижимости</p>
+            
+            <form id="cost-estimate-form">
+              <div class="form-group">
+                <label for="property-type">Тип недвижимости</label>
+                <select id="property-type" required>
+                  <option value="">Выберите тип</option>
+                  <option value="apartment">Квартира</option>
+                  <option value="house">Частный дом</option>
+                  <option value="commercial">Коммерческая</option>
+                  <option value="land">Земельный участок</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="area">Площадь (м²)</label>
+                <input type="number" id="area" min="10" max="1000" required>
+              </div>
+
+              <div class="form-group">
+                <label for="location">Район города</label>
+                <input type="text" id="location" placeholder="Например, Центральный район" required>
+              </div>
+
+              <div class="form-group">
+                <label for="condition">Состояние</label>
+                <select id="condition" required>
+                  <option value="">Выберите состояние</option>
+                  <option value="new">Новостройка</option>
+                  <option value="good">Хорошее</option>
+                  <option value="average">Среднее</option>
+                  <option value="needs-repair">Требует ремонта</option>
+                </select>
+              </div>
+
+              <button type="submit" class="cta">Оценить стоимость</button>
+            </form>
+
+            <div id="cost-result" class="cost-result hidden">
+              <h4>Примерная стоимость:</h4>
+              <div class="estimated-price">8 500 000 ₽</div>
+              <p class="small muted">*Точную стоимость можно определить после бесплатного выезда специалиста</p>
+              <a href="contacts.html" class="cta">Заказать точную оценку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-section">
+        <h2>Процесс профессиональной оценки</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h4>Заявка</h4>
+            <p>Вы оставляете заявку на оценку</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h4>Выезд специалиста</h4>
+            <p>Наш эксперт приезжает для осмотра объекта</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h4>Анализ рынка</h4>
+            <p>Изучаем аналогичные предложения на рынке</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h4>Отчет</h4>
+            <p>Предоставляем подробный отчет об оценке</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container bottom">
+      <div>
+        <div class="brand-title">Villato</div>
+        <div class="small muted">© <span id="year"></span> Все права защищены</div>
+      </div>
+      <div class="footer-right">
+        <div class="socials">
+          <a href="https://t.me/villato_realty" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://twitter.com/villato_realty" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="small muted">+375 29 114 38 72</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const costForm = document.getElementById('cost-estimate-form');
+      const costResult = document.getElementById('cost-result');
+      
+      if (costForm) {
+        costForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // нужно подключить к API
+          const area = parseInt(document.getElementById('area').value) || 50;
+          const type = document.getElementById('property-type').value;
+          
+          let pricePerMeter = 2000; // базовая цена
+          
+          switch(type) {
+            case 'apartment': pricePerMeter = 1800; break;
+            case 'house': pricePerMeter = 1500; break;
+            case 'commercial': pricePerMeter = 800; break;
+            case 'land': pricePerMeter = 500; break;
+          }
+          
+          const estimatedPrice = area * pricePerMeter;
+          const formattedPrice = estimatedPrice.toLocaleString('usd') + ' $';
+          
+          document.querySelector('.estimated-price').textContent = formattedPrice;
+          costResult.classList.remove('hidden');
+          
+          // Прокрутка к результату
+          costResult.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
